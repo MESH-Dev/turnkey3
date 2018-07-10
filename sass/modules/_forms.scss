@@ -96,7 +96,10 @@ label > .label-body {
 }
 
 input{
-   border: 2px solid $white;
+   border-bottom: 2px solid $white;
+   border-left: 0;
+   border-right: 0;
+   border-top: 0;
    background: transparent;
    color: $white;
    //font-family: $primary_font;
@@ -133,12 +136,15 @@ input{
       text-transform: none;
       font-size: 2rem;
       height: 50px;
-      float: right;
+      float: left;
       transition: all 0.2s ease-in-out;
       background-color: $white;
-      @media screen and ($bp-smaller-than-tablet){
-         float: left;
-      }
+      width: 160px;
+      text-align: left;
+      padding-left: 14px;
+      // @media screen and ($bp-smaller-than-tablet){
+      //    float: left;
+      // }
       &:hover{
          color: $white;
          background-color: transparent;

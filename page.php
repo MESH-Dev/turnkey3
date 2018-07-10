@@ -10,30 +10,39 @@
 		$tertiary_color = get_field('tertiary_color', 'options');
 
 	if (!empty($bg_url)) { ?>
-		<div class="welcome-gate" id="top">
+		<div class="welcome-gate short" id="top">
 			<div class="hero" style="background-image:url('<?php echo $bg_url ?>')"></div>
 			<div class="img-filter" style="background-color:<?php echo $primary_color ?>;"></div>
 	<?php } else{ ?>
-		<div class="welcome-gate" id="top" style="background:<?php echo $primary_color ?>;">
+		<div class="welcome-gate short" id="top" style="background:<?php echo $primary_color ?>;">
 	<?php }; ?>
 		<div class="container">
 			<div class="row">
 				<div class="sign sf">
 					<h1 id="welcomeTitle" class="pf"><?php the_field('statement'); ?></h1>
-					<p id="welcomeDesc" class="sf"><?php the_field('main_blurb'); ?></p>
 				</div>
 			</div>
 		</div>
-		<a id="scrollLink">
+		<!-- <a id="scrollLink">
 			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 31">
 			    <g>
 			      <path d="M3,1.31l37.3,27.88L77.6,1.31" style="fill: none;stroke: #fff;stroke-width: 3px"/>
 			    </g>
 			</svg>
-		</a>
+		</a> -->
 	</div>
 
-	<div class="panel wysiwyg">
+	<div class="panel wysiwyg page">
+		<div class="container">
+			<div class="row">
+				<div class="columns-12 page-callout">
+					<?php
+					$callout = get_field('page_callout');
+					?>
+					<h3 class="pf"><?php echo $callout; ?></h3>
+				</div>
+			</div>
+		</div>
 		<div class="container">
 			<div class="row">
 				<?php

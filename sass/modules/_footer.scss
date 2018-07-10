@@ -10,7 +10,7 @@ footer{
       color: $white;
       // font-family: $av-medium;
       //font-family: $primary_font;
-      font-weight: 400;
+      font-weight: 500;
    }
    .address, .contact-media{
       margin-bottom: 20px;
@@ -20,11 +20,11 @@ footer{
    }
    .contact-media{
       a, p{
-         text-decoration: none;
+         text-decoration: underline;
          transition: all 0.2s ease-in-out;
          // font-family: $av-bold;
          //font-family: $primary_font;
-         font-weight: 700;
+         font-weight: 500;
          &:hover{
             opacity: 0.8;
          }

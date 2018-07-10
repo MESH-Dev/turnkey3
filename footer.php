@@ -3,7 +3,7 @@
 $primary_color = get_field('primary_color', 'option');
 $secondary_color = get_field('secondary_color', 'option');
 ?>
-<footer id="footer" class="panel site-footer primary" style="background-color:<?php echo $primary_color ?>;">
+<footer id="footer" class="panel site-footer primary" style="background-color:<?php echo $secondary_color ?>;">
 
 	<div class="container">
 		<div class="row">
@@ -18,19 +18,19 @@ $secondary_color = get_field('secondary_color', 'option');
 				<div class="address">
 				<?php
             if (!empty($line1)) { ?>
-               <p class="pf"><?php echo $line1 ?></p>
+               <p class="sf"><?php echo $line1 ?></p>
             <?php };
             if (!empty($line2)) { ?>
-               <p class="pf"><?php echo $line2 ?></p>
+               <p class="sf"><?php echo $line2 ?></p>
             <?php }; ?>
 				</div>
 				<div class="contact-media">
 				<?php
             if (!empty($phone)) { ?>
-               <a href="tel:<?php echo $phone ?>" class="pf"><p><?php echo $phone ?></p></a>
+               <a href="tel:<?php echo $phone ?>" class="sf"><p><?php echo $phone ?></p></a>
             <?php };
             if (!empty($email)) { ?>
-               <a href="mailto:<?php echo $email ?>" class="pf"><p><?php echo $email ?></p></a>
+               <a href="mailto:<?php echo $email ?>" class="sf"><p><?php echo $email ?></p></a>
             <?php }; ?>
 				</div>
 				<div class="social">

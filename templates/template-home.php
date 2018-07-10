@@ -45,6 +45,9 @@
 							<div class="row">
 								<div class="columns-5">
 									<h2 class="blurb pf" style="color:<?php echo $primary_color ?>"><?php the_sub_field('main_blurb'); ?></h2>
+								</div>
+								<div class="columns-6 offset-by-1">
+									<div class="intro-desc sf"><?php the_sub_field('intro_text'); ?></div>
 									<?php
 									$cta_link = get_sub_field('cta_link');
 									$cta_link_external = get_sub_field('cta_link_external');
@@ -53,9 +56,6 @@
 										<a href="<?php echo $cta_link ?>"<?php if ($cta_link_external) {echo 'target="_blank"';} ?>><p class="cta pf"><?php echo $cta_title ?></p></a>
 									<?php };
 									?>
-								</div>
-								<div class="columns-6 offset-by-1">
-									<div class="intro-desc sf"><?php the_sub_field('intro_text'); ?></div>
 								</div>
 							</div>
 						</div>

@@ -31,10 +31,9 @@
 
 		$font_select = get_field('font_pairing', 'option');
 		if ($font_select == 1) {
-			echo '<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">';
-			echo '<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">';
-			$pf_css = "font-family: 'Nunito Sans', sans-serif;";
-			$sf_css = "font-family: 'Merriweather', serif;";
+			echo ' <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">';
+			$pf_css = "font-family: 'Merriweather', serif;";
+			$sf_css = "font-family: 'Montserrat', sans-serif;";
 		} elseif($font_select == 2){
 			echo '<link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">';
 			$pf_css = "font-family: 'Montserrat', sans-serif;";
@@ -144,21 +143,28 @@
 
 	<style>
 		p.cta{
-			background-color:<?php echo $tertiary_color; ?>;
+			/* background-color:<//?php echo $tertiary_color; ?>; */
+			color: <?php echo $secondary_color; ?> !important;
 		}
 		p.cta:hover,
 		p.cta:active,
 		p.cta:focus{
-			color: <?php echo $tertiary_color; ?> !important;
+			/* color: <//?php echo $tertiary_color; ?> !important; */
 		}
 		.main-navigation ul{
 			background-color: <?php echo $primary_color; ?>;
 		}
 		input[type="submit"]{
-			color: <?php echo $primary_color; ?>;
+			color: <?php echo $secondary_color; ?>;
 		}
 		.panel.wysiwyg a{
 			color: <?php echo $tertiary_color; ?>;
+		}
+		.listing-card h4{
+			color: <?php echo $tertiary_color; ?>;
+		}
+		.listing-card a{
+			color: <?php echo $secondary_color; ?>;
 		}
 	</style>
 
@@ -174,7 +180,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="columns-12">
-					<a class="logo" href="#top">
+					<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<img src="<?php echo $logo_url ?>" alt="">
 					</a>
 					<nav id="main-nav" class="main-navigation">
