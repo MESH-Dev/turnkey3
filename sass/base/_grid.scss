@@ -35,6 +35,15 @@ $max-width: 1200px;
 		display: table;
 		clear: both;
   }
+  &.listing{
+     margin-bottom: 20px;
+     &.grid{
+        margin-bottom: 40px;
+     }
+     &:last-of-type{
+        margin-bottom: 0;
+     }
+ }
   &.padding-bottom{
   	margin-bottom: $pad;
   }

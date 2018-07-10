@@ -100,6 +100,9 @@
       &.page{
          padding-top: 63px;
       }
+      .breadcrumbs{
+         margin-bottom: 0;
+      }
       h1,h2,h3,h4,h5,h6{
          margin-bottom: 1rem;
          a{
@@ -360,11 +363,24 @@
 
 //Listing Items
 .listing-card{
-   width: 100%;
    position: relative;
-   margin-bottom: 20px;
-   &:last-of-type{
-      margin-bottom: 0;
+   // margin-bottom: 20px;
+   // &:last-of-type{
+   //    margin-bottom: 0;
+   // }
+   &.listing-grid{
+      .item-text{
+         padding: 0;
+         min-height: unset;
+         h4{
+            padding: 15px 0;
+            margin-bottom: 0;
+         }
+      }
+      .read-more{
+         position: relative;
+         display: block;
+      }
    }
    .thumbnail{
       height: 280px;
@@ -380,6 +396,7 @@
          letter-spacing: 1px;
          line-height: 53px;
          font-weight: 400;
+         margin-bottom: 10px;
       }
       p{
          font-size: 1.6rem;
@@ -426,6 +443,10 @@
       color: $darkgrey;
       font-weight: 400;
    }
+}
+
+.wysiwyg .page-callout{
+   margin: 45px 0;
 }
 
 .clearfix{

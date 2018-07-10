@@ -35,6 +35,16 @@
 	<div class="panel wysiwyg page">
 		<div class="container">
 			<div class="row">
+				<p class="breadcrumbs">
+					<?php
+					 $current = $post->ID;
+					 $parent = $post->post_parent;
+					 $grandparent_get = get_post($parent);
+					 $grandparent = $grandparent_get->post_parent;
+					 ?>
+					 <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent); }else {echo get_the_title($parent); }?>
+					 > <?php echo the_title(); ?>
+				</p>
 				<div class="columns-12 page-callout">
 					<?php
 					$callout = get_field('page_callout');

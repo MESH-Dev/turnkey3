@@ -46,26 +46,81 @@
 		<div class="container">
 			<?php
 			if( have_rows('item_card') ):
-				 while ( have_rows('item_card') ) : the_row();
-				  $thumbnail = get_sub_field('thumbnail');
-				  $thumbnail_url = $thumbnail['sizes']['large'];
-				  $item_title = get_sub_field('item_title');
-				  $item_desc = get_sub_field('item_description');
-				  $link_text = get_sub_field('link_text');
-				  $link_url = get_sub_field('link_url');
-				  ?>
-					 <div class="listing-card row">
-						 <div class="thumbnail columns-5" style="background-image: url('<?php echo $thumbnail_url; ?>');">
-						 </div>
-						 <div class="item-text columns-7">
-							 <h4 class="item-title pf"><?php echo $item_title; ?></h4>
-							 <p class="item-exc sf"><?php echo $item_desc; ?></p>
-							 <a class="read-more pf" href="<?php echo $link_url; ?>"><?php echo $link_text; ?></a>
-						 </div>
-					 </div>
-				 <?php
-				 endwhile; endif;
-			?>
+				$grid = get_field('item_layout');
+				$width_class = '';
+				if ($grid) {
+					$cards = get_field('item_card');
+					$card_num = count($cards);
+					$card_cnt=0;
+					// $width_class = 'columns-4';
+					?>
+					<div class="row listing grid">
+						<?php while ( have_rows('item_card') ) : the_row();
+						$card_cnt++;
+						?>
+						<div class="listing-card columns-4 listing-grid">
+							<?php
+							$thumbnail = get_sub_field('thumbnail');
+							$thumbnail_url = $thumbnail['sizes']['large'];
+							$item_title = get_sub_field('item_title');
+							$item_desc = get_sub_field('item_description');
+							$link_text = get_sub_field('link_text');
+							$link_url = get_sub_field('link_url');
+							?>
+							<div class="thumbnail" style="background-image: url('<?php echo $thumbnail_url; ?>');">
+							</div>
+							<div class="item-text">
+								<h4 class="item-title pf"><?php echo $item_title; ?></h4>
+								<?php
+								if ($item_desc) { ?>
+									<p class="item-exc sf"><?php echo $item_desc; ?></p>
+								<?php }
+								if ($link_text) { ?>
+									<a class="read-more pf" href="<?php echo $link_url; ?>"><?php echo $link_text; ?></a>
+								<?php }
+								?>
+							</div>
+						</div>
+						<?php
+						if ($card_cnt % 3 == 0) {
+						  echo '</div><div class="mesh-row">';
+					  } elseif($card_cnt == $card_num){?>
+						  </div><!--end final row -->
+					  <?php }
+					  endwhile;
+					} else{
+					// $width_class = 'columns-12';
+					while ( have_rows('item_card') ) : the_row();
+					?>
+					<div class="row listing">
+						<div class="listing-card columns-12">
+							<?php
+							$thumbnail = get_sub_field('thumbnail');
+							$thumbnail_url = $thumbnail['sizes']['large'];
+							$item_title = get_sub_field('item_title');
+							$item_desc = get_sub_field('item_description');
+							$link_text = get_sub_field('link_text');
+							$link_url = get_sub_field('link_url');
+							?>
+							<div class="thumbnail columns-5" style="background-image: url('<?php echo $thumbnail_url; ?>');">
+							</div>
+							<div class="item-text columns-7">
+								<h4 class="item-title pf"><?php echo $item_title; ?></h4>
+								<?php
+								if ($item_desc) { ?>
+									<p class="item-exc sf"><?php echo $item_desc; ?></p>
+								<?php }
+								if ($link_text) { ?>
+									<a class="read-more pf" href="<?php echo $link_url; ?>"><?php echo $link_text; ?></a>
+								<?php }
+								?>
+							</div>
+						</div>
+					</div>
+					<?php endwhile;
+				}
+			endif;
+				?>
 		</div>
 	</div>
 </main><!-- End of Content -->

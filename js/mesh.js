@@ -42,10 +42,10 @@ jQuery(document).ready(function($){
        }
    });
 
-   $('#mobileMenuTrigger').click(function(){
-      $('.main-navigation ul').slideToggle();
-   });
-
+   // $('#mobileMenuTrigger').click(function(){
+   //    $('.main-navigation ul').slideToggle();
+   // });
+   
    $('#scrollLink').click(function(){
       var dist = ($('#top').outerHeight()) - 60;
       $('html,body').animate({
