@@ -249,7 +249,7 @@
                     "id": ""
                 },
                 "choices": {
-                    "1": "Nunito Sans and Merriweather",
+                    "1": "Merriweather and Montserrat",
                     "2": "Montserrat and Playfair Display",
                     "3": "Ubuntu and Zilla Slab",
                     "4": "IBM Plex Serif and Merriweather",
@@ -279,7 +279,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "#C36256"
+                "default_value": "#00294E"
             },
             {
                 "key": "field_5abd0f348d271",
@@ -294,7 +294,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "#2F4858"
+                "default_value": "#DE9151"
             },
             {
                 "key": "field_5abd2ce6553c1",
@@ -309,7 +309,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "#895EBD"
+                "default_value": "#A36A3B"
             },
             {
                 "key": "field_5ac62076db1eb",
@@ -405,6 +405,293 @@
         "hide_on_screen": [
             "the_content"
         ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5b44f995237cc",
+        "title": "Hero Panel (Listing & Text Pages)",
+        "fields": [
+            {
+                "key": "field_5b44f9952e09c",
+                "label": "Statement",
+                "name": "statement",
+                "type": "text",
+                "instructions": "Enter text to be used as the main callout in the welcome section (first panel) of the site. This should say something important about the subject of the website. This is limited to 46 characters max including spaces.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": 46
+            },
+            {
+                "key": "field_5b44f9952e0dc",
+                "label": "Background Image",
+                "name": "background_image",
+                "type": "image",
+                "instructions": "Choose an image to be used as the background of the Welcome Gate: the first panel of the website. This image should be 2000px wide or wider and 1300px tall or taller, with no sharp pattern or eye-catching point of interest that distracts from the site's title, which will be over top of the image.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "default"
+                }
+            ],
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "templates\/template-landing.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5b43cc0f45443",
+        "title": "Landing Page Items",
+        "fields": [
+            {
+                "key": "field_5b4502e21b959",
+                "label": "Item Layout",
+                "name": "item_layout",
+                "type": "true_false",
+                "instructions": "Select list layout or grid layout.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "Grid",
+                "ui_off_text": "List"
+            },
+            {
+                "key": "field_5b43cc33056a1",
+                "label": "Item Cards",
+                "name": "item_card",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "row",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5b43cc6b056a2",
+                        "label": "Item Thumbnail",
+                        "name": "thumbnail",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "preview_size": "thumbnail",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5b43cc90056a3",
+                        "label": "Item Title",
+                        "name": "item_title",
+                        "type": "text",
+                        "instructions": "Limit 54 char including spaces.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": 54
+                    },
+                    {
+                        "key": "field_5b43cc98056a4",
+                        "label": "Item Description",
+                        "name": "item_description",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5b43ccab056a5",
+                        "label": "Link Text",
+                        "name": "link_text",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5b43ccb1056a6",
+                        "label": "Link URL",
+                        "name": "link_url",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "templates\/template-landing.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5b43d12a2b5d7",
+        "title": "Page Callout",
+        "fields": [
+            {
+                "key": "field_5b43d131183d1",
+                "label": "Page Callout",
+                "name": "page_callout",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "templates\/template-landing.php"
+                }
+            ],
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "default"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
         "active": 1,
         "description": ""
     },
@@ -780,9 +1067,9 @@
         "location": [
             [
                 {
-                    "param": "post_type",
+                    "param": "post_template",
                     "operator": "==",
-                    "value": "page"
+                    "value": "templates\/template-home.php"
                 }
             ]
         ],
@@ -798,8 +1085,71 @@
         "description": ""
     },
     {
+        "key": "group_5b29595054ee6",
+        "title": "Text Page",
+        "fields": [
+            {
+                "key": "field_5b295991a3d4b",
+                "label": "Content Columns",
+                "name": "content_columns",
+                "type": "repeater",
+                "instructions": "This panel allows for custom text and content. Click 'Add Column' to create a column for your content. For two columns, add another. Columns are limited to 2. When you have two columns, the top text box will be the left column, and the bottom text box will be the right column.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 2,
+                "layout": "block",
+                "button_label": "Add Column",
+                "sub_fields": [
+                    {
+                        "key": "field_5b295991a3d4c",
+                        "label": "Content Column",
+                        "name": "column",
+                        "type": "wysiwyg",
+                        "instructions": "Enter column content.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "default"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_5ab3d65c79c3c",
-        "title": "Welcome Gate",
+        "title": "Welcome Gate Home",
         "fields": [
             {
                 "key": "field_5ab3d6657b86f",
@@ -867,9 +1217,9 @@
         "location": [
             [
                 {
-                    "param": "post_type",
+                    "param": "post_template",
                     "operator": "==",
-                    "value": "page"
+                    "value": "templates\/template-home.php"
                 }
             ]
         ],
