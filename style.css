@@ -1649,47 +1649,39 @@ footer form p {
 /* line 440, sass/modules/_modules.scss */
 .listing-card .item-text a {
   width: 100%;
-  font-size: 2.2rem;
-  text-decoration: none;
+  font-size: 2rem;
+  text-decoration: underline;
   font-weight: 400;
+  transition: all 0.2s ease-in-out;
 }
-/* line 445, sass/modules/_modules.scss */
+/* line 446, sass/modules/_modules.scss */
 .listing-card .item-text a:hover {
-  text-decoration: none;
+  text-decoration: underline;
+  opacity: 0.5;
 }
-/* line 447, sass/modules/_modules.scss */
+/* line 449, sass/modules/_modules.scss */
 .listing-card .item-text a:hover::after {
   width: 50%;
 }
-/* line 451, sass/modules/_modules.scss */
-.listing-card .item-text a::after {
-  content: '';
-  display: block;
-  color: inherit;
-  border-bottom: 2px solid;
-  width: 40%;
-  transition: all 0.2s ease-in-out;
-  margin-top: 12px;
-}
-/* line 462, sass/modules/_modules.scss */
+/* line 464, sass/modules/_modules.scss */
 .listing-card .read-more {
   position: absolute;
   bottom: 0;
 }
 @media screen and (max-width: 750px) {
-  /* line 462, sass/modules/_modules.scss */
+  /* line 464, sass/modules/_modules.scss */
   .listing-card .read-more {
     position: relative;
   }
 }
 
-/* line 471, sass/modules/_modules.scss */
+/* line 473, sass/modules/_modules.scss */
 .page-callout, .panel.wysiwyg .page-callout {
   margin-bottom: 63px;
   padding-left: 20px;
   border-left: 2px solid;
 }
-/* line 475, sass/modules/_modules.scss */
+/* line 477, sass/modules/_modules.scss */
 .page-callout h3, .panel.wysiwyg .page-callout h3 {
   margin-bottom: 0;
   font-size: 2.6rem;
@@ -1698,12 +1690,12 @@ footer form p {
   font-weight: 400;
 }
 
-/* line 484, sass/modules/_modules.scss */
+/* line 486, sass/modules/_modules.scss */
 .wysiwyg .page-callout {
   margin: 45px 0;
 }
 
-/* line 488, sass/modules/_modules.scss */
+/* line 490, sass/modules/_modules.scss */
 .clearfix {
   clear: both;
 }

@@ -439,24 +439,26 @@
       }
       a{
          width: 100%;
-         font-size: 2.2rem;
-         text-decoration: none;
+         font-size: 2rem;
+         text-decoration: underline;
          font-weight: 400;
+         transition: all 0.2s ease-in-out;
          &:hover{
-            text-decoration: none;
+            text-decoration: underline;
+            opacity: 0.5;
             &::after{
                width: 50%;
             }
          }
-         &::after{
-            content: '';
-            display: block;
-            color: inherit;
-            border-bottom: 2px solid;
-            width: 40%;
-            transition: all 0.2s ease-in-out;
-            margin-top: 12px;
-         }
+         // &::after{
+         //    content: '';
+         //    display: block;
+         //    color: inherit;
+         //    border-bottom: 2px solid;
+         //    width: 40%;
+         //    transition: all 0.2s ease-in-out;
+         //    margin-top: 12px;
+         // }
       }
    }
    .read-more{
