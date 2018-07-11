@@ -37,11 +37,17 @@ $max-width: 1200px;
   }
   &.listing{
      margin-bottom: 20px;
-     &.grid{
-        margin-bottom: 40px;
-     }
      &:last-of-type{
         margin-bottom: 0;
+     }
+     @media screen and ($bp-smaller-than-tablet){
+        margin-bottom: 0;
+     }
+     &.grid{
+       margin-bottom: 40px;
+       @media screen and ($bp-smaller-than-tablet){
+          margin-bottom: 0;
+       }
      }
  }
   &.padding-bottom{

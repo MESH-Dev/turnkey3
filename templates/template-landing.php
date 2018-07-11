@@ -83,7 +83,7 @@
 						</div>
 						<?php
 						if ($card_cnt % 3 == 0) {
-						  echo '</div><div class="mesh-row">';
+						  echo '</div><div class="row">';
 					  } elseif($card_cnt == $card_num){?>
 						  </div><!--end final row -->
 					  <?php }

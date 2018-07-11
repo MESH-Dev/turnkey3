@@ -73,6 +73,15 @@
    background: $primary_color;
 }
 
+.breadcrumbs, .panel.wysiwyg .breadcrumbs{
+   a{
+      font-weight: 400;
+      color: $grey;
+      font-size: 1.4rem;
+   }
+   margin-bottom: 0;
+}
+
 .panel{
    padding: 76px 0;
    position: relative;
@@ -100,9 +109,6 @@
       &.page{
          padding-top: 63px;
       }
-      .breadcrumbs{
-         margin-bottom: 0;
-      }
       h1,h2,h3,h4,h5,h6{
          margin-bottom: 1rem;
          a{
@@ -113,15 +119,15 @@
       h1{
          // font-family: $av-demibold;
          font-size: 4.8rem;
-         letter-spacing: 1.5px;
+         letter-spacing: 1.31px;
          color: $primary_color;
          //font-family: $primary_font;
          font-weight: 600;
       }
       h2{
          // font-family: $av-ultralight;
-         font-size: 4.2rem;
-         letter-spacing: 1.2px;
+         font-size: 3.2rem;
+         letter-spacing: 0.91px;
          color: $secondary_color;
          //font-family: $primary_font;
          font-weight: 200;
@@ -130,9 +136,9 @@
          // font-family: $av-regular;
          font-size: 3.6rem;
          color: $secondary_color;
-         letter-spacing: 1.03px;
+         letter-spacing: 0.74px;
          //font-family: $primary_font;
-         font-weight: 400;
+         font-weight: 200;
       }
       h4{
          // font-family: $av-demibold;
@@ -368,13 +374,28 @@
    // &:last-of-type{
    //    margin-bottom: 0;
    // }
+   [class*='columns-']{
+      @media screen and ($bp-smaller-than-tablet){
+         padding: 0;
+      }
+   }
+   @media screen and ($bp-smaller-than-tablet){
+      margin-bottom: 20px;
+   }
    &.listing-grid{
       .item-text{
          padding: 0;
          min-height: unset;
+         @media screen and ($bp-smaller-than-tablet){
+            padding: 0;
+         }
          h4{
             padding: 15px 0;
             margin-bottom: 0;
+            @media screen and ($bp-smaller-than-tablet){
+               font-size: 3rem;
+               padding-top: 0;
+            }
          }
       }
       .read-more{
@@ -386,23 +407,35 @@
       height: 280px;
       background-size: cover;
       background-position: center;
+      @media screen and ($bp-smaller-than-tablet){
+         margin-bottom: 20px;
+      }
    }
    .item-text{
       padding-left: 20px;
       position: relative;
       min-height: 280px;
+      @media screen and ($bp-smaller-than-tablet){
+         padding: 0;
+         min-height: unset;
+      }
       h4{
          font-size: 3.8rem;
          letter-spacing: 1px;
          line-height: 53px;
          font-weight: 400;
          margin-bottom: 10px;
+         @media screen and ($bp-smaller-than-tablet){
+            font-size: 3rem;
+            padding-top: 0;
+         }
       }
       p{
-         font-size: 1.6rem;
-         letter-spacing: 1.2px;
+         font-size: 1.4rem;
+         letter-spacing: 0.41px;
          line-height: normal;
-         font-weight: 300;
+         font-weight: 400;
+         color: $grey;
       }
       a{
          width: 100%;
@@ -429,10 +462,13 @@
    .read-more{
       position: absolute;
       bottom: 0;
+      @media screen and ($bp-smaller-than-tablet){
+         position: relative;
+      }
    }
 }
 
-.page-callout, .wysiwyg .page-callout{
+.page-callout, .panel.wysiwyg .page-callout{
    margin-bottom: 63px;
    padding-left: 20px;
    border-left: 2px solid;

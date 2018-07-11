@@ -36,14 +36,19 @@
 		<div class="container">
 			<div class="row">
 				<p class="breadcrumbs">
-					<?php
-					 $current = $post->ID;
-					 $parent = $post->post_parent;
-					 $grandparent_get = get_post($parent);
-					 $grandparent = $grandparent_get->post_parent;
-					 ?>
-					 <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent); }else {echo get_the_title($parent); }?>
-					 > <?php echo the_title(); ?>
+					 <?php if( is_page() ) :
+					    if( $ancs = array_reverse(get_ancestors($post->ID,'page')) ) {
+					        foreach( $ancs as $anc ) {
+								  $this_link = get_permalink($anc);
+								   ?>
+								  <a href="<?php echo $this_link; ?>" >
+								  <?php
+						        echo get_page( $anc )->post_title . '</a> > '; ?>
+							  <?php
+					        }
+					    }
+						 echo $post->post_title;
+					endif; ?>
 				</p>
 				<div class="columns-12 page-callout">
 					<?php

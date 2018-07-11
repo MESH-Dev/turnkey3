@@ -32,6 +32,14 @@ footer{
    }
    .social{
       margin-top: 10px;
+      a{
+         @media screen and ($bp-smaller-than-tablet){
+            margin-right: 14px;
+            &:last-of-type{
+               margin-right: 0;
+            }
+         }
+      }
       i, svg{
          font-size: 3.2rem;
          margin-right: 14px;
@@ -40,6 +48,9 @@ footer{
             -webkit-transform: translateY(-5px);
             -ms-transform: translateY(-5px);
             transform: translateY(-5px);
+         }
+         @media screen and ($bp-smaller-than-tablet){
+            margin: 0;
          }
       }
    }

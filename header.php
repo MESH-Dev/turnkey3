@@ -160,8 +160,26 @@
 		.panel.wysiwyg a{
 			color: <?php echo $tertiary_color; ?>;
 		}
-		.listing-card h4{
+		.panel.wysiwyg h1{
+			color: <?php echo $primary_color; ?>;
+		}
+		.panel.wysiwyg h2{
+			color: <?php echo $secondary_color; ?>;
+		}
+		.panel.wysiwyg h3{
 			color: <?php echo $tertiary_color; ?>;
+		}
+		.panel.wysiwyg h4{
+			color: <?php echo $primary_color; ?>;
+		}
+		.panel.wysiwyg h5{
+			color: <?php echo $tertiary_color; ?>;
+		}
+		.panel.wysiwyg h6{
+			color: #505050;
+		}
+		.listing-card h4{
+			color: <?php echo $primary_color; ?>;
 		}
 		.listing-card a{
 			color: <?php echo $secondary_color; ?>;
