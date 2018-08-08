@@ -1217,7 +1217,7 @@
         "location": [
             [
                 {
-                    "param": "post_template",
+                    "param": "page_template",
                     "operator": "==",
                     "value": "templates\/template-home.php"
                 }
