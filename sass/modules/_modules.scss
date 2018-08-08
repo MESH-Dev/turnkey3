@@ -84,12 +84,24 @@
 }
 
 .breadcrumbs, .panel.wysiwyg .breadcrumbs{
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 1.4rem;
+   letter-spacing: 0.41px;
+   line-height: 24px;
+   color: $grey;
+   margin-bottom: 45px;
    a{
       font-weight: 400;
       color: $grey;
       font-size: 1.4rem;
+      text-decoration: underline;
+      transition: opacity 0.2s ease-in-out;
+      &:hover{
+         text-decoration: none;
+         opacity: 0.8;
+      }
    }
-   margin-bottom: 0;
 }
 
 .panel{
@@ -98,7 +110,7 @@
    overflow: hidden;
    background-color: $white;
    &.listing{
-      padding-top: 63px;
+      padding-top: 10px;
    }
    &.cards{
       background-color: transparent;
@@ -117,7 +129,7 @@
    }
    &.wysiwyg{
       &.page{
-         padding-top: 63px;
+         padding-top: 10px;
       }
       h1,h2,h3,h4,h5,h6{
          margin-bottom: 1rem;
@@ -435,40 +447,39 @@
          line-height: 53px;
          font-weight: 400;
          margin-bottom: 10px;
-         @media screen and ($bp-smaller-than-tablet){
+         @media screen and ($bp-smaller-than-desktop){
             font-size: 3rem;
+            line-height: normal;
             padding-top: 0;
          }
       }
       p{
          font-size: 1.4rem;
          letter-spacing: 0.41px;
-         line-height: normal;
+         line-height: 24px;
          font-weight: 400;
          color: $grey;
       }
       a{
          width: 100%;
          font-size: 2rem;
-         text-decoration: underline;
+         text-decoration: none;
          font-weight: 400;
-         transition: all 0.2s ease-in-out;
          &:hover{
-            text-decoration: underline;
-            opacity: 0.5;
+            text-decoration: none;
             &::after{
                width: 50%;
             }
          }
-         // &::after{
-         //    content: '';
-         //    display: block;
-         //    color: inherit;
-         //    border-bottom: 2px solid;
-         //    width: 40%;
-         //    transition: all 0.2s ease-in-out;
-         //    margin-top: 12px;
-         // }
+         &::after{
+            content: '';
+            display: block;
+            color: inherit;
+            border-bottom: 2px solid;
+            width: 40%;
+            transition: all 0.2s ease-in-out;
+            margin-top: 5px;
+         }
       }
    }
    .read-more{
@@ -494,7 +505,7 @@
 }
 
 .wysiwyg .page-callout{
-   margin: 45px 0;
+   // margin: 45px 0;
 }
 
 .clearfix{

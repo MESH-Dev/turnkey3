@@ -35,6 +35,21 @@
 	<div class="panel listing">
 		<div class="container">
 			<div class="row">
+				<p class="breadcrumbs">
+					 <?php if( is_page() ) :
+						 if( $ancs = array_reverse(get_ancestors($post->ID,'page')) ) {
+							  foreach( $ancs as $anc ) {
+								  $this_link = get_permalink($anc);
+									?>
+								  <a href="<?php echo $this_link; ?>" >
+								  <?php
+								  echo get_page( $anc )->post_title . '</a> > '; ?>
+							  <?php
+							  }
+						 }
+						 echo $post->post_title;
+					endif; ?>
+				</p>
 				<div class="columns-12 page-callout">
 					<?php
 					$callout = get_field('page_callout');
@@ -66,9 +81,11 @@
 							$item_desc = get_sub_field('item_description');
 							$link_text = get_sub_field('link_text');
 							$link_url = get_sub_field('link_url');
+							if (!empty($thumbnail_url)) { ?>
+								<div class="thumbnail" style="background-image: url('<?php echo $thumbnail_url; ?>');">
+								</div>
+							<?php }
 							?>
-							<div class="thumbnail" style="background-image: url('<?php echo $thumbnail_url; ?>');">
-							</div>
 							<div class="item-text">
 								<h4 class="item-title pf"><?php echo $item_title; ?></h4>
 								<?php
