@@ -573,7 +573,7 @@
                         "label": "Item Description",
                         "name": "item_description",
                         "type": "text",
-                        "instructions": "",
+                        "instructions": "347 char max including spaces",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -585,7 +585,7 @@
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
-                        "maxlength": ""
+                        "maxlength": 347
                     },
                     {
                         "key": "field_5b43ccab056a5",
