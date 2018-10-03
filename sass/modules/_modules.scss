@@ -11,12 +11,17 @@
       padding: 170px 0 0 0;
       text-align: left;
       .container{
-         -webkit-transform: translateY(-30%);
-         -ms-transform: translateY(-30%);
-         transform: translateY(-30%);
+         -webkit-transform: translateY(-40%);
+         -ms-transform: translateY(-40%);
+         transform: translateY(-40%);
          .sign{
             h1{
                margin: 0;
+            }
+            img{
+               width: auto;
+               max-height: 400px;
+               max-width: 100%;
             }
          }
       }
@@ -45,6 +50,11 @@
       //font-family: $secondary_font;
       max-width: 845px;
       margin: 0 auto;
+      img{
+         width: auto;
+         max-height: 400px;
+         max-width: 100%;
+      }
       h1{
          // font-family: $av-italic;
          letter-spacing: 2.5px;
@@ -84,7 +94,7 @@
 }
 
 .breadcrumbs, .panel.wysiwyg .breadcrumbs{
-   font-family: 'Montserrat', sans-serif;
+   // font-family: 'Montserrat', sans-serif;
    font-weight: 400;
    font-size: 1.4rem;
    letter-spacing: 0.41px;
